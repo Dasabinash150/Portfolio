@@ -99,7 +99,6 @@ section{
 .header .nav-menu ul li a {
     font-size: 16px;
     color: white;
-    
 }
 .header .nav-menu ul li a::after{
     content: "";
@@ -186,21 +185,9 @@ section{
     
 }
 .home .home-image img:hover{
-    /* border: 5px solid rgba(17, 222, 236, 0.5); */
     box-shadow: 0px 2px 20px 10px #06e6ff;
-    /* animation: bgrotate 2s linear infinite; */
-    transform: translateY(1.2);
+  
 }
-/* @keyframes bgrotate{
-    0%{
-        transform: rotate3d(360);
-        background-color: #c2ddfd;
-    }
-    100%{
-        transform: rotate3d(360);
-        background-color: red;
-    }
-} */
 .btn-group{
     display: flex;
     gap: 20px;
@@ -360,6 +347,7 @@ section{
 }
 .about-image{
     width: 30%;
+    display: flex;
 }
 .about-image img{
     /* width: 100%; */
@@ -535,7 +523,7 @@ section{
     color: white;
 }
 .contact .contact-text h3{
-    margin-left: 30px;
+    /* margin-left: 30px; */
     padding: 20px;
     color: white;
 }
@@ -560,13 +548,15 @@ footer{
 @media screen and (max-width: 800px){
     .header{
         width: 100%;
-        /* background-color: red; */
-        padding: 0px 20px;
-             
+        padding: 0px 20px;             
     }
     /* body{
         background-color: green;
     } */
+    .container{
+        width: 90%;
+        padding: 30px 0px 40px 0px;
+    }
     .header .logo{
         width: 50%;
     }
@@ -578,20 +568,22 @@ footer{
         height: 100%;
         gap: 30px;
     }
-    .home .home-text{
+    .home .home-text,
+    .home .home-image {
         width: 100%;
-    }
-    .home .home-image{
-        width: 100%;
+        justify-content: center;
     }
     .about{
         flex-direction: column;
         gap: 20px;
     }
+    .about-image,
     .about-text {
         width: 100%;
         margin-top: 20px;
+        justify-content: center;
     }
+    
     .Skill h4 .fa-brands,.fa-solid{
         font-size: 25px;
     }
@@ -621,6 +613,7 @@ footer{
     .project-details{
         overflow: scroll;
     }
+    
     .contact .contact-form{
         width: 100%;
     }
